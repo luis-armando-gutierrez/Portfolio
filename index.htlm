@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Nombre | Data Scientist</tit([docs.github.com](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site?utm_source=chatgpt.com))ortafolio profesional de ciencia de datos y análisis de negocio." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121933;
+      --card: rgba(255,255,255,0.06);
+      --text: #f4f7fb;
+      --muted: #b7c0d8;
+      --accent: #6ea8fe;
+      --accent-2: #94f7c5;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 40px rgba(0,0,0,.25);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(110,168,254,.18), transparent 30%),
+        radial-gradient(circle at top left, rgba(148,247,197,.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 16, 32, 0.7);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .menu a:hover { color: var(--text); }
+
+    .hero {
+      padding: 72px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent-2);
+      font-size: .9rem;
+      margin-bottom: 18px;
+      background: rgba(255,255,255,.03);
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4.5rem);
+      line-height: 1.08;
+      margin: 0 0 16px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 26px 0 24px;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #88b8ff);
+      color: #08101f;
+      border: none;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(160px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .quick-card, .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card span {
+      display: block;
+      color: var(--muted);
+      font-size: .88rem;
+      margin-bottom: 4px;
+    }
+
+    .profile {
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,.08);
+      background: #1e2744;
+    }
+
+    .profile h3 {
+      text-align: center;
+      margin: 10px 0 6px;
+      font-size: 1.5rem;
+    }
+
+    .profile p {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .links {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .link-pill {
+      padding: 11px 14px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin: 0 0 12px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      max-width: 70ch;
+      margin-bottom: 28px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(110,168,254,.12);
+      border: 1px solid rgba(110,168,254,.25);
+      color: #dce9ff;
+      font-size: .92rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .project-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      padding: 18px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255,255,255,.04);
+      border-radius: 0 14px 14px 0;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 6px;
+    }
+
+    .timeline-item .meta {
+      color: var(--accent-2);
+      font-size: .92rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 32px;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .quick-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">TuNombre.dev</a>
+      <div class="menu">
+        <a href="#home">Inicio</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#stack">Tech Stack</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Data Scientist | Data Analyst | Business Insight</div>
+        <h1>Convierto datos en decisiones que sí mueven el negocio.</h1>
+        <p>
+          Soy un profesional orientado a datos con experiencia en análisis, modelado predictivo y comunicación de hallazgos para negocio. Mi enfoque combina pensamiento analítico, claridad ejecutiva y soluciones prácticas.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+          <a class="btn" href="./CV.pdf" target="_blank">Descargar CV</a>
+          <a class="btn" href="#contact">Contáctame</a>
+        </div>
+
+        <div class="quick-info">
+          <div class="quick-card">
+            <span>Especialidad</span>
+            Machine Learning y análisis de negocio
+          </div>
+          <div class="quick-card">
+            <span>Ubicación</span>
+            México
+          </div>
+          <div class="quick-card">
+            <span>Idiomas</span>
+            Español, Inglés, Alemán
+          </div>
+          <div class="quick-card">
+            <span>Enfoque</span>
+            Modelos útiles y decisiones accionables
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile">
+        <img class="avatar" src="https://via.placeholder.com/320x320.png?text=Tu+Foto" alt="Foto de perfil" />
+        <h3>Tu Nombre</h3>
+        <p>Data Scientist who understands operations and business.</p>
+        <div class="links">
+          <a class="link-pill" href="mailto:tucorreo@correo.com">tucorreo@correo.com</a>
+          <a class="link-pill" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          <a class="link-pill" href="https://github.com/" target="_blank">GitHub</a>
+          <div class="link-pill">+52 000 000 0000</div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section id="expertise">
+    <div class="container">
+      <h2 class="section-title">Expertise</h2>
+      <p class="section-text">
+        Esta sección resume el tipo de valor que aportas. La idea es que no solo digas herramientas, sino problemas que sabes resolver.
+      </p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Machine Learning</h3>
+          <p>Desarrollo de modelos predictivos para clasificación, regresión, segmentación y optimización de decisiones.</p>
+        </article>
+        <article class="card">
+          <h3>Análisis de Datos</h3>
+          <p>Limpieza, exploración, visualización y hallazgos accionables para detectar patrones, riesgos y oportunidades.</p>
+        </article>
+        <article class="card">
+          <h3>Integración con negocio</h3>
+          <p>Traducción de necesidades operativas o comerciales a soluciones técnicas claras, medibles y útiles.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <h2 class="section-title">Tech Stack</h2>
+      <p class="section-text">
+        Ajusta esta lista según tu perfil real. Es mejor poner menos herramientas, pero que sí domines.
+      </p>
+      <div class="card">
+        <div class="skills">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Plotly</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Streamlit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="section-text">
+        Aquí conviene mostrar 3 o 4 proyectos fuertes. Cada uno debe explicar el problema, qué hiciste y qué resultado obtuviste.
+      </p>
+      <div class="grid-3">
+        <article class="card project-card">
+          <h3>Predicción de cancelación de clientes</h3>
+          <p>Modelo para identificar clientes con alto riesgo de abandono y priorizar acciones de retención.</p>
+          <ul>
+            <li>EDA, feature engineering y validación.</li>
+            <li>Comparación entre varios modelos.</li>
+            <li>Métrica de negocio y recomendación final.</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn" href="#">GitHub</a>
+            <a class="btn" href="#">Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Valoración de autos usados</h3>
+          <p>Modelo para estimar precios de vehículos y reducir tiempos de cotización con mayor consistencia.</p>
+          <ul>
+            <li>Limpieza de datos y tratamiento de outliers.</li>
+            <li>Modelado con boosting y evaluación.</li>
+            <li>Interpretación de variables importantes.</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn" href="#">GitHub</a>
+            <a class="btn" href="#">Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Dashboard de lealtad y consumo</h3>
+          <p>Visualización ejecutiva para segmentar clientes, medir recurrencia y apoyar campañas comerciales.</p>
+          <ul>
+            <li>KPIs claros para stakeholders.</li>
+            <li>Segmentación por comportamiento.</li>
+            <li>Insights para marketing y ventas.</li>
+          </ul>
+          <div class="project-links">
+            <a class="btn" href="#">GitHub</a>
+            <a class="btn" href="#">Capturas</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experiencia</h2>
+      <p class="section-text">
+        Usa esta parte para mostrar que tu perfil técnico está conectado con experiencia real, no solo cursos.
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Data Science Student / Portfolio Projects</h3>
+          <div class="meta">2025 - Actualidad</div>
+          <p>Desarrollo de proyectos de machine learning, análisis exploratorio, evaluación de modelos y comunicación de resultados para portafolio profesional.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Rol profesional previo relevante</h3>
+          <div class="meta">Año - Año</div>
+          <p>Resume aquí la parte operativa, comercial o técnica que te da ventaja comparativa frente a otros perfiles junior.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Formación</h3>
+          <div class="meta">Universidad / Bootcamp</div>
+          <p>Incluye tu carrera, especialidad y cualquier formación que fortalezca tu narrativa profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="card contact-box">
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-text" style="margin-inline:auto;">
+          Si buscas a alguien que pueda analizar datos, comunicar hallazgos y conectar técnica con operación, hablemos.
+        </p>
+        <div class="hero-cta" style="justify-content:center;">
+          <a class="btn btn-primary" href="mailto:tucorreo@correo.com">Envíame un correo</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Tu Nombre. Hecho con HTML, CSS y GitHub Pages.
+    </div>
+  </footer>
+</body>
+</html>
